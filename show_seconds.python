@@ -1,0 +1,22 @@
+число = 0
+basic.show_leds("""
+    # . # . #
+    . # . # .
+    # . . . #
+    . # . # .
+    # . # . #
+    """)
+basic.pause(1000)
+
+def on_forever():
+    basic.show_string("" + str(число))
+    basic.pause(1000)
+basic.forever(on_forever)
+
+def on_in_background():
+    global число
+    while True:
+        число = число + 1
+        basic.pause(1000)
+control.in_background(on_in_background)
+

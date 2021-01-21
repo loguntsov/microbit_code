@@ -9,7 +9,7 @@ basic.show_leds("""
 basic.pause(1000)
 
 def on_forever():
-    basic.show_string("" + str(число))
+    basic.show_string(str((число)))
     basic.pause(1000)
 basic.forever(on_forever)
 
@@ -19,4 +19,3 @@ def on_in_background():
         число = число + 1
         basic.pause(1000)
 control.in_background(on_in_background)
-

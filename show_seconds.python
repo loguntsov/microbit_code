@@ -1,16 +1,15 @@
 число = 0
 basic.show_leds("""
-    # . # . #
-    . # . # .
+    # # # . .
+    # # . . .
     # . . . #
-    . # . # .
-    # . # . #
+    . . . # #
+    . . # # #
     """)
 basic.pause(1000)
 
 def on_forever():
-    basic.show_string(str((число)))
-    basic.pause(1000)
+    basic.show_string("" + str(число) + "-")
 basic.forever(on_forever)
 
 def on_in_background():
